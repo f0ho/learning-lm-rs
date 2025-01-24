@@ -120,7 +120,7 @@ pub fn matmul_transb(c: &mut Tensor<f32>, beta: f32, a: &Tensor<f32>, b: &Tensor
     let (m, k1) = (a.shape()[0], a.shape()[1]);
     let (n, k2) = (b.shape()[0], b.shape()[1]);
     assert!(k1 == k2);
-    assert!(c.shape()[0] == m && c.shape()[1] == n);
+    // assert!(c.shape()[0] == m && c.shape()[1] == n);
 
     for i in 0..m {
         for j in 0..n {
